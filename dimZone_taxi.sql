@@ -1,0 +1,10 @@
+CREATE TABLE dbo.dimZone_taxi
+WITH
+	(
+	DISTRIBUTION = ROUND_ROBIN,
+	 CLUSTERED COLUMNSTORE INDEX
+	)
+
+AS 
+
+SELECT * FROM dbo.stage_taxizone;
